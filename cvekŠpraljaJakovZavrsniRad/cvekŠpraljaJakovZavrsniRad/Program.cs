@@ -17,6 +17,9 @@ namespace cvekŠpraljaJakovZavrsniRad
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            List<Racun> racuni = new List<Racun>();
+
         }
     }
 }
