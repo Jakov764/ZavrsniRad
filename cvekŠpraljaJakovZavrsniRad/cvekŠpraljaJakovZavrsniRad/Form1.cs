@@ -12,6 +12,9 @@ namespace cvekŠpraljaJakovZavrsniRad
 {
     public partial class Form1 : Form
     {
+        // ovdje definirati sve varijable (broj kuglica)
+        int brojKuglicaKeks;
+
         public Form1()
         {
             InitializeComponent();
@@ -281,17 +284,30 @@ namespace cvekŠpraljaJakovZavrsniRad
 
         private void btnKeksMin_Click(object sender, EventArgs e)
         {
-            int i = Convert.ToInt32(this.textBoxKeks.Text);
+            brojKuglicaKeks = Convert.ToInt32(this.textBoxKeks.Text);
             if (checkBoxKeks.Checked)
             {
-                i--;
-                textBoxKeks.Text = Convert.ToString(i);
+                brojKuglicaKeks--;
+                textBoxKeks.Text = Convert.ToString(brojKuglicaKeks);
             }
 
-            if (i == 0)
+            if (brojKuglicaKeks == 0)
             {
                 checkBoxKeks.Checked = false;
             }
+        }
+
+        private void BtnGotov_Click(object sender, EventArgs e)
+        {
+            int brojKuglicaSladoled = brojKuglicaKeks; // zbroji sve kuglice
+
+            // koji je oblik?
+
+            // kreirati objekt sladoled s brojem kuglica i oblikom
+         //   Sladoled sladoled = new Sladoled(brojKuglicaSladoled, oblikSladoleda);
+
+            // richTextBHox.AppendText(slatodel.ToString());
+
         }
     }
 }
